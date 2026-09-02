@@ -6,15 +6,6 @@ from datetime import datetime, timedelta
 from typing import Any, Dict, List
 
 
-def flatten(nested: List[Any]) -> List[Any]:
-    """Flatten a nested list."""
-    flat_list: List[Any] = []
-    for item in nested:
-        if isinstance(item, list):
-            flat_list.extend(flatten(item))
-        else:
-            flat_list.append(item)
-    return flat_list
 
 
 def group_by_key(items: List[Dict], key: str) -> Dict[Any, List[Dict]]:
