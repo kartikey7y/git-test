@@ -10,9 +10,7 @@ def reverse_words(text: str) -> str:
 
 
 def count_vowels(text: str) -> int:
-    """Count vowels in the given text."""
-    vowels = set("aeiouAEIOU")
-    return sum(1 for char in text if char in vowels)
+    return sum(1 for char in text if char in "aeiouAEIOU")
 
 
 def is_palindrome(text: str) -> bool:
