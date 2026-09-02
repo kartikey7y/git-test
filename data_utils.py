@@ -7,14 +7,14 @@ from typing import Any, Dict, List
 
 
 def flatten(nested: List[Any]) -> List[Any]:
-    """Flatten a nested list one level deep."""
-    result = []
+    """Flatten a nested list."""
+    flat_list: List[Any] = []
     for item in nested:
         if isinstance(item, list):
-            result.extend(item)
+            flat_list.extend(flatten(item))
         else:
-            result.append(item)
-    return result
+            flat_list.append(item)
+    return flat_list
 
 
 def group_by_key(items: List[Dict], key: str) -> Dict[Any, List[Dict]]:
