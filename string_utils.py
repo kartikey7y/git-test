@@ -4,10 +4,6 @@ import re
 from collections import Counter
 
 
-def reverse_words(text: str) -> str:
-    """Reverse the order of words in a string."""
-    return " ".join(text.split()[::-1])
-
 
 def count_vowels(text: str) -> int:
     return sum(1 for char in text if char in "aeiouAEIOU")
